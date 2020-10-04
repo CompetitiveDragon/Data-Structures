@@ -4,12 +4,10 @@ public class ArrayStack<Item> {
 
     private static final int DEFAULT_CAPACITY = 128;
 
-    @SuppressWarnings("unchecked")
     public ArrayStack(int capacity) {
         this.array = (Item[]) new Object[capacity];
     }
 
-    @SuppressWarnings("unchecked")
     public ArrayStack() {
         this.array = (Item[]) new Object[DEFAULT_CAPACITY];
     }
@@ -43,7 +41,6 @@ public class ArrayStack<Item> {
         return array.length;
     }
 
-    @SuppressWarnings("unchecked")
     private void extendArray() {
         Item[] temp = array;
         array = (Item[]) new Object[temp.length * 2];
